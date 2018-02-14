@@ -4,13 +4,15 @@
     <title>Lab 2</title>
     <link rel="stylesheet" href="/styles.css">
    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   </head>
   <body>
 <div class="wrapper">
 
 <div id="header">
-    <h1 style="padding-left:1em;">Ultimate Trivia</h1>
-<hr style="height:30px; background-color:#333;">
+    <h1 style="color:white; padding-left:1em;">
+<i class="material-icons">extension</i>  Ultimate Trivia  <i class="material-icons">extension</i></h1>
 <nav><ul><!--
 	<li><a class="active" href="index.html">Home</a>
 	<li><a href="weather.html">Weather</a></li>
@@ -53,8 +55,10 @@
 		<option value="28">Vehicles</option>
 		</select>
 
-		<br><br><div id='score'>Total score:  0</div>
-		<br><div id='streak'>Hot Streak:  0</div>
+		<br><br><div id='scoring'>
+		<div id='score'>Total score:  0</div><div id='total'>Total questions:  0</div>
+		<div id='streak'>Current Streak:  0</div><div id='bestStreak'>Best streak:  0</div>
+		</div>
 
 </div><div id="side2">
 	<label>Difficulty:</label><br>
@@ -64,7 +68,7 @@
 		<option value="medium">Medium</option>
 		<option value="hard">Hard</option>
 	</select><br><br><br>
-	<input id="generateQuestion" type="submit" value="Generate Question"></input>
+	<input id="generateQuestion" type="submit" value="New Question"></input>
 </form></div>
 <div id="R_space"></div>
 <div id="trivia">
@@ -86,7 +90,7 @@
 
 
 <div id="footer">
-	<p>Github repository: <a class="white" href="https://github.com/marcman00/creative2.git">marcman00's Creative Project 2</a></p>
+	<p class="white">Github repository: <a class="white" href="https://github.com/marcman00/creative2.git">marcman00's Creative Project 2</a></p>
 </div></div>
   </body>
 </html>

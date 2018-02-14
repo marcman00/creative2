@@ -4,6 +4,8 @@
 $(document).ready(function() {
 	var score=0;
 	var streak=0;
+	var total=0;
+	var bestStreak=0;
 
 	var submitButton=$("#generateQuestion");
 	var correctAnswer="-1";
@@ -85,10 +87,11 @@ $(document).ready(function() {
 	answerButton.click(function(e) {
 		e.preventDefault();
 
-		
+		try {
 		// Play a ding if they got the answer correct or error if they get an incorrect answer
 		var choice=document.querySelector('input[name="choice"]:checked').value;
-
+		
+		total++;
 		if (choice==correctAnswer) {
 			var audio = document.getElementById('correctSound');
 			audio.play();
@@ -96,10 +99,13 @@ $(document).ready(function() {
 			// Increase your score
 			score++;
 			streak++;
+
+			if (streak>bestStreak)
+				bestStreak=streak;
 		}
 		else {
 			var audio = document.getElementById('wrongSound');
-			audio.volume=0.4;
+			audio.volume=0.25;
 			audio.play();
 			document.getElementById("answerQuestion").disabled = true;
 			// reset streak
@@ -107,11 +113,15 @@ $(document).ready(function() {
 		}
 		// Update your score
 		$("#score").html("Total score:  "+score);
-		$("#streak").html("Hot streak:  "+streak);
+		$("#streak").html("Current streak:  "+streak);
+		$("#total").html("Total questions:  "+total);
+		$("#bestStreak").html("Best streak:  "+bestStreak);
 		// highlight the correct answer
 		var correct=document.getElementById('choice'+parseInt(correctAnswer));
 		console.log(correct);
-		correct.style = 'border:3px solid green; border-radius:6px;';
+		correct.style = 'border:3px solid green; border-radius:7px;';
+		}
+		catch(err) {}
 	});
 		
 		
