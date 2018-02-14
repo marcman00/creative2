@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab 2</title>
+    <link rel="stylesheet" href="/styles.css">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+<div class="wrapper">
+
+<div id="header">
+    <h1 style="padding-left:1em;">Ultimate Trivia</h1>
+<hr style="height:30px; background-color:#333;">
+<nav><ul><!--
+	<li><a class="active" href="index.html">Home</a>
+	<li><a href="weather.html">Weather</a></li>
+	<li><a href="stackOverflow.html">Stack Overflow</a></li>
+--></ul></nav>
+</div>
+<div id="intro">
+<h2 style="text-align:center">Welcome to Ultimate Trivia!</h2>
+<h3 style="text-align:center">Pick a category and difficulty to get started</h3>
+</div>
+<div id="L_space"></div>
+<div id="side1"><form>
+	<label>Category:</label>
+
+	<select id="categoryInput">
+		<option value="any">Any Category</option>
+		<option value="27">Animals</option>
+		<option value="25">Art</option>
+		<option value="26">Celebrities</option>
+		<option value="9">General Knowledge</option>
+		<option value="22">Geography</option>
+		<option value="23">History</option>
+		<option value="16">Entertainment: Board Games</option>
+		<option value="10">Entertainment: Books</option>
+		<option value="32">Entertainment: Cartoon &amp; Animations</option>
+		<option value="29">Entertainment: Comics</option>
+		<option value="11">Entertainment: Film</option>
+		<option value="31">Entertainment: Japanese Anime &amp; Manga</option>
+		<option value="12">Entertainment: Music</option>
+		<option value="13">Entertainment: Musicals &amp; Theatres</option>
+		<option value="14">Entertainment: Television</option>
+		<option value="15">Entertainment: Video Games</option>
+		<option value="17">Science &amp; Nature</option>
+		<option value="18">Science: Computers</option>
+		<option value="30">Science: Gadgets</option>
+		<option value="19">Science: Mathematics</option>
+		<option value="20">Mythology</option>
+		<option value="24">Politics</option>
+		<option value="21">Sports</option>
+		<option value="28">Vehicles</option>
+		</select>
+
+		<br><br><div id='score'>Total score:  0</div>
+		<br><div id='streak'>Hot Streak:  0</div>
+
+</div><div id="side2">
+	<label>Difficulty:</label><br>
+	<select id="difficultyInput">
+		<option value="any">Any Difficulty</option>
+		<option value="easy">Easy</option>
+		<option value="medium">Medium</option>
+		<option value="hard">Hard</option>
+	</select><br><br><br>
+	<input id="generateQuestion" type="submit" value="Generate Question"></input>
+</form></div>
+<div id="R_space"></div>
+<div id="trivia">
+<div id="question"></div>
+<form id='multipleChoice'>
+<div id="answers" style="width:90%;">
+  <input type="radio" name="choice" value="0" style="float:left;"><div id="choice0"></div>
+  <input type="radio" name="choice" value="1" style="float:left;"><div id="choice1"></div>
+  <input type="radio" name="choice" value="2" style="float:left;"><div id="choice2"></div>
+  <input type="radio" name="choice" value="3" style="float:left;"><div id="choice3"></div>
+</div>
+<input style="float:right; margin:10px; margin-top:0px;" id="answerQuestion" type="submit" value="Answer"></input>
+<audio id="correctSound" src="/media/ding.wav" preload="auto" autobuffer></audio>
+<audio id="wrongSound" src="/media/wrong.wav" preload="auto" autobuffer></audio>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script text="type/javascript" src="/triviaScript.js"></script>
+
+
+<div id="footer">
+	<p>Github repository: <a class="white" href="https://github.com/marcman00/creative2.git">marcman00's Creative Project 2</a></p>
+</div></div>
+  </body>
+</html>
